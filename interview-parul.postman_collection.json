@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "4c80f753-af1c-4250-82d2-cd1a3f39c49e",
+		"name": "interview-parul",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25288047"
+	},
+	"item": [
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"\",\r\n    \"password\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://83d5-150-107-232-188.ngrok-free.app/api/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTY0Zjg4NzkxNTc5ODk1YmYzZTViNiIsImlhdCI6MTY4MzM3ODU5NywiZXhwIjoxNjgzNTUxMzk3fQ.uVqTnPG0gO8uLkNSzVVIChw2bQn7pAiuGMJku6Dss_M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://83d5-150-107-232-188.ngrok-free.app/api/v1/removepost/645628039d4ec75c982669f8",
+					"protocol": "https",
+					"host": [
+						"83d5-150-107-232-188",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"removepost",
+						"645628039d4ec75c982669f8"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "active count",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTY0Zjg4NzkxNTc5ODk1YmYzZTViNiIsImlhdCI6MTY4MzM3ODU5NywiZXhwIjoxNjgzNTUxMzk3fQ.uVqTnPG0gO8uLkNSzVVIChw2bQn7pAiuGMJku6Dss_M",
+						"type": "text"
+					}
+				],
+				"url": "https://83d5-150-107-232-188.ngrok-free.app/api/v1/activecount"
+			},
+			"response": []
+		},
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTY0Zjg4NzkxNTc5ODk1YmYzZTViNiIsImlhdCI6MTY4MzM3ODA1NiwiZXhwIjoxNjgzNTUwODU2fQ.k--GzyWtphfMx3qRruTjy3DY0zmMzygFKXd0heoRgRs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"\",\r\n    \"body_data\":\"\",\r\n    \"active\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://83d5-150-107-232-188.ngrok-free.app/api/v1/createpost"
+			},
+			"response": []
+		},
+		{
+			"name": "edit post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTUzZWM1NDI0MTQ0NjAwNjAxZTA2ZSIsImlhdCI6MTY4MzM2NzI3NywiZXhwIjoxNjgzNTQwMDc3fQ.RGNi2nBNGA5ysqukJxtTPtfo5Klt9k8xzZx0EqR7bZ0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"\",\r\n    \"body_data\":\"\",\r\n    \"active\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://83d5-150-107-232-188.ngrok-free.app/api/v1/editpost/645628039d4ec75c982669f8"
+			},
+			"response": []
+		},
+		{
+			"name": "search post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://83d5-150-107-232-188.ngrok-free.app/api/v1/searchpost?longitude=73.8983&latitude=23.949",
+					"protocol": "https",
+					"host": [
+						"83d5-150-107-232-188",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"searchpost"
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "73.8983"
+						},
+						{
+							"key": "latitude",
+							"value": "23.949"
+						},
+						{
+							"key": "itemperpage",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "currentpageno",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"\",\r\n    \"email\":\"\",\r\n    \"password\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6000/api/v1/register"
+			},
+			"response": []
+		}
+	]
+}
